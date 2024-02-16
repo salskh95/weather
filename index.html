@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <div id="searchContainer">
+      <input
+        type="text"
+        id="locationInput"
+        placeholder="Type your location here..."
+      />
+      <button id="searchButton">Search</button>
+    </div>
+    <div id="map"></div>
+    <script src="index.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARN3VFk0c5bcvEejCYhwH_cJfAYEd0fKI&callback=initMap"
+      async
+      defer
+    ></script>
+  </body>
+</html>
