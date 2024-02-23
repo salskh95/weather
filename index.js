@@ -59,6 +59,13 @@ function getWeatherData(location) {
               content: contentString,
               position: location,
             });
+            google.maps.event.addListener(infoWindow, "domready", function () {
+              document
+                .querySelector(".gm-style-iw")
+                .addEventListener("click", function () {
+                  infoWindow.close();
+                });
+            });
             infoWindow.open(map);
           })
           .catch((error) => console.log("Error fetching weather data:", error));
